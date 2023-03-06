@@ -21,6 +21,18 @@
     "typescript": "^4.5.2"
   },
   "extends": "tsconfig/nextjs.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"] 
+  "include": [
+    "."
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
+  ],
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "zustand": "^4.3.5",
+    "stores": "*",
+    "common": "*"
+  }
 }
