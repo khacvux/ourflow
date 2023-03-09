@@ -1,9 +1,20 @@
-import { createStore } from "zustand";
+import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import * as TYPES from "types";
 
-export const useAuthStore = createStore<TYPES.IAuth>()(
-  persist((set, get) => ({}), {
-    name: "auth-storage",
-  })
+export const useAuthStore = create<TYPES.IAuth>()(
+  persist(
+    (set, get) => ({
+      modalOpened: false,
+      handleOpenModal: () => {
+        set({
+          modalOpened: !get().modalOpened,
+        });
+      },
+      token: "",
+    }),
+    {
+      name: "auth-storage",
+    }
+  )
 );

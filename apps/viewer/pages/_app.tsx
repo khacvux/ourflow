@@ -5,7 +5,6 @@ import Header from "ui/components/headers/Header";
 import Footer from "ui/components/footers/Footer";
 import { NextPage } from "next";
 import { ReactElement, ReactNode } from "react";
-import RootLayout from "ui/components/layouts/RootLayout";
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;

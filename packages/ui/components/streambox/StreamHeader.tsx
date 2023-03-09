@@ -34,7 +34,7 @@ function StreamHeader(props: props) {
           <div className="flex flex-row items-center  space-x-2 bg-inherit">
             <button
               className=" flex flex-row items-center space-x-2 rounded-md
-            border border-blue-600 bg-blue-600 bg-inherit  px-3 py-1 font-medium text-white outline-none"
+            border border-blue-600 !bg-blue-600 bg-inherit  px-3 py-1 font-medium text-white outline-none"
             >
               <AddIcon className=" bg-inherit" color="white" />
               <p className=" bg-inherit text-sm">Follow</p>
@@ -49,7 +49,7 @@ function StreamHeader(props: props) {
           </div>
         </div>
         <div className="flex w-full flex-row items-center space-x-5 bg-inherit">
-          <p className=" rounded-md bg-inherit bg-blue-600 px-3 text-sm font-semibold text-white ">
+          <p className=" rounded-md bg-inherit !bg-blue-600 px-3 text-sm font-semibold text-white ">
             {props.streamerName}
           </p>
           <p className=" bg-inherit text-sm font-light text-[#A3A3A3] ">

@@ -16,7 +16,11 @@ function Card({ streamerBanner, title, name, category, avatar, sid }: props) {
   const router = useRouter();
 
   const handleNavigate = useCallback(() => {
-    router.push("/lives/"+ sid);
+    router.push("/lives/" + sid);
+  }, []);
+
+  const handleNavigateToUser = useCallback(() => {
+    router.push("/user/" + sid);
   }, []);
 
   return (
@@ -30,9 +34,8 @@ function Card({ streamerBanner, title, name, category, avatar, sid }: props) {
       <div className="flex flex-1 flex-row items-center space-x-4 bg-inherit px-3 ">
         <img
           alt="Kent Dodds"
-
           src={avatar}
-          className="bg-inherit rounded-full w-[56px] h-[56px]"
+          className="h-[56px] w-[56px] rounded-full bg-inherit"
         />
         <div className=" w-full bg-inherit">
           <Heading
@@ -43,10 +46,13 @@ function Card({ streamerBanner, title, name, category, avatar, sid }: props) {
           >
             {title}
           </Heading>
-          <b className=" cursor-pointer bg-inherit text-sm text-[#666666]">
+          <b
+            className=" cursor-pointer bg-inherit text-sm text-[#666666]"
+            onClick={handleNavigateToUser}
+          >
             {name}
           </b>
-          <div className=" w-full flex h-[25px] flex-row items-center justify-between bg-inherit">
+          <div className=" flex h-[25px] w-full flex-row items-center justify-between bg-inherit">
             <div className="flex flex-row items-center space-x-2">
               {/* {category} */}
               <div className="cursor-pointer rounded-sm bg-[#323232] py-[0.5px] px-2 ">

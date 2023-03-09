@@ -27,7 +27,7 @@ function ViewerSidebar() {
     <div className={`${isSmall ? `w-[50px]` : `w-[220px]`}`}>
       <div
         className={` fixed h-[calc(100vh-56px)] bg-[#1A1A1A] px-2 py-4
-      ${isSmall ? `w-[50px]` : `w-[220px]`} transition-all`}
+      ${isSmall ? `w-[50px]` : `w-[220px]`} `}
       >
         <button
           className=" absolute -right-4 bottom-1/2 cursor-pointer rounded-r-lg bg-inherit py-3 px-[1px]"

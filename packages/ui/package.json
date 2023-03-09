@@ -31,8 +31,12 @@
   ],
   "dependencies": {
     "@chakra-ui/icons": "^2.0.17",
-    "zustand": "^4.3.5",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.12",
+    "common": "*",
     "stores": "*",
-    "common": "*"
+    "zustand": "^4.3.5"
   }
 }
